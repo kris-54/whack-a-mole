@@ -1,0 +1,96 @@
+<html>
+<head>
+	<title>whack a mole</title>
+	<link rel="stylesheet" href="/whackmole/css/whack.css">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+	
+</head>
+<body>
+	<audio src="/whackmole/main_theme.wav" autoplay loop></audio>
+	<audio id="knife" src="/whackmole/knife.wav"></audio>
+	<div id="container">
+		<div class="box" id="box1"><img class="pic" id="pic1" src="/whackmole/img/c1.1.jpg"></div>
+		<div class="box" id="box2"><img class="pic" id="pic2" src="/whackmole/img/f2.1.jpg"></div>
+		<div class="box" id="box3"><img class="pic" id="pic3" src="/whackmole/img/m3.jpg"></div>
+		<div class="box" id="box4"><img class="pic" id="pic4" src="/whackmole/img/j4.jpg"></div>
+		<div class="box" id="box5"><img class="pic" id="pic5" src="/whackmole/img/l5.jpg"></div>
+		<div class="box" id="box6"><img class="pic" id="pic6" src="/whackmole/img/h6.1.jpg"></div>
+		<div class="box" id="box7"><img class="pic" id="pic7" src="/whackmole/img/cs7.1.jpg"></div>
+		<div class="box" id="box8"><img class="pic" id="pic8" src="/whackmole/img/js8.1.jpg"></div>
+		<div class="box" id="box9"><img class="pic" id="pic9" src="/whackmole/img/p9.1.jpg"></div>
+		<div class="playerscore">Score = 0
+		<div class="Time">Time = 20</div>
+		
+	</div>
+		<button id="start" type="button" class="button">START</button>
+		
+
+    	
+
+
+	<script>
+		
+
+		function getRandomInt(min, max) {
+		  	return Math.floor(Math.random() * (max - min + 1)) + min;
+		};
+		
+
+
+		function startGame() {
+
+			var timer = 20;
+
+			var intervalId = setInterval(function () {
+				if (timer == 0) {
+					alert ('GAME OVER!!!');
+					clearInterval(intervalId);
+				}
+				var pics = $('.pic');
+				var activePic = $(pics[getRandomInt(0,8)]);
+				activePic.fadeIn(350).delay(175).fadeOut(350);
+				$('.Time').html("Time = " + --timer);
+				},2000);
+					
+		};
+
+							
+		$(document).ready(function() {
+
+		var timer = 20;
+		var score = 0;
+
+
+		$('#start').click(function() {
+	        startGame();
+	    });
+
+	        				
+	    $('.pic').click(function() {
+	    	$('.playerscore').html("Score = " +  ++score);
+		});	
+
+		$('.pic').click(function() {
+			var audio = '<audio id="knife" src="/whackmole/knife.wav"></audio>'
+
+			audio.play();
+		    
+		});
+						 
+	});  
+
+
+
+	
+        
+
+
+		
+
+    </script>
+</body>
+</html>
+
+
+		

@@ -1,0 +1,111 @@
+<html>
+<head>
+	<title>Splash Screen</title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<style type="text/css">
+		#ss {
+			text-align: center;
+			padding-top: 100px;
+		}
+
+		
+		.blood {
+			font-size: 60px;
+			line-height: 60px;
+			margin: 0px;
+			text-align: center;
+			color: red;
+	       	color: red;
+	       	text-shadow:
+			4px 4px 1px #300000,
+			4px 6px 1px #400000,
+			4px 8px 1px #500000,
+			4px 10px 1px #600000,
+			4px 12px 1px #700000,
+			4px 14px 1px #800000,
+			4px 16px 1px #900000,
+			4px 18px 1px #A00000,
+			4px 20px 1px #B00000,
+			4px 22px 1px #C00000,
+			4px 24px 1px #D00000,
+			4px 26px 1px #E00000,
+			4px 28px 1px #F00000,
+			4px 30px 1px #FA0000,
+			4px 32px 1px #FB0000,
+			4px 34px 1px #FC0000,
+			4px 36px 1px #FD0000,
+			4px 38px 1px #FE0000,
+			4px 40px 2px #FF0000;
+			}
+
+		.button {
+			margin-left: 550px;
+			margin-top: 100px;			
+			-moz-box-shadow:inset 0px 0px 0px 0px #0f0d0d;
+			-webkit-box-shadow:inset 0px 0px 0px 0px #0f0d0d;
+			box-shadow:inset 0px 0px 0px 0px #0f0d0d;
+			background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #121111), color-stop(1, #0a0909) );
+			background:-moz-linear-gradient( center top, #121111 5%, #0a0909 100% );
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#121111', endColorstr='#0a0909');
+			background-color:#121111;
+			-webkit-border-top-left-radius:41px;
+			-moz-border-radius-topleft:41px;
+			border-top-left-radius:41px;
+			-webkit-border-top-right-radius:41px;
+			-moz-border-radius-topright:41px;
+			border-top-right-radius:41px;
+			-webkit-border-bottom-right-radius:41px;
+			-moz-border-radius-bottomright:41px;
+			border-bottom-right-radius:41px;
+			-webkit-border-bottom-left-radius:41px;
+			-moz-border-radius-bottomleft:41px;
+			border-bottom-left-radius:41px;
+			text-indent:1.31px;
+			border:1px solid #d83526;
+			display:inline-block;
+			color:#f00e0e;
+			font-family:Comic Sans MS;
+			font-size:24px;
+			font-weight:bold;
+			font-style:normal;
+			height:56px;
+			line-height:56px;
+			width:139px;
+			text-decoration:none;
+			text-align:center;
+			text-shadow:1px 3px 0px #33050e;
+			}
+		.button:hover {
+			background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0a0909), color-stop(1, #121111) );
+			background:-moz-linear-gradient( center top, #0a0909 5%, #121111 100% );
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0a0909', endColorstr='#121111');
+			background-color:#0a0909;
+		}
+		.button:active {
+			position:relative;
+			top:1px;
+		}
+	</style>
+
+
+</head>
+<body>
+	<audio src="/whackmole/spooky.wav" autoplay></audio>
+	<div class="screen" id="ss">
+	<h1 class="blood">Whack a Killer</h1>
+	</div>
+
+	
+	<a href="/whackmole/whack.html" class="button">ENTER</a>
+
+
+	<script>
+		$("#enter").click(function(){
+		  $(this)
+		});
+
+
+	</script>
+
+</body>
+</html>
